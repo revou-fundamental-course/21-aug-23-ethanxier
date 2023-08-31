@@ -196,3 +196,10 @@ header {
     color: #777;
     margin-bottom: 5px;
 }
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 1rem;
+}
