@@ -5,13 +5,12 @@ function generateButtonNavbar(dataNavbar) {
         const buttonData = dataNavbar[i];
         const link = document.createElement("a");
         link.classList.add("button-navbar");
-        link.href = buttonData.id; // Use buttonData.id for the href (scroll to the element with this ID)
+        link.href = buttonData.id;
         link.textContent = buttonData.label;
 
         link.addEventListener("click", function(event) {
             event.preventDefault();
 
-            // Scroll to the element associated with the link
             const elementToScrollTo = document.querySelector(buttonData.id);
             if (elementToScrollTo) {
                 elementToScrollTo.scrollIntoView({ behavior: "smooth" });
@@ -23,8 +22,8 @@ function generateButtonNavbar(dataNavbar) {
 }
 
 function displayFormSubmission() {
-    const form = document.getElementById("myForm"); // Gunakan ID formulir untuk memilihnya
-    const pesanDiv = document.getElementById("pesan");
+    const form = document.getElementById("myForm")
+    const pesanDiv = document.getElementById("pesan")
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -32,7 +31,7 @@ function displayFormSubmission() {
         const name = document.getElementById("name").value;
         const tanggalLahir = document.getElementById("tanggalLahir").value;
         const jenisKelamin = document.querySelector('select[name="jenisKelamin"]').value;
-        const pesan = document.getElementById("textPesan").value; // Perbaiki ID elemen pesan
+        const pesan = document.getElementById("textPesan").value;
 
         const displayMessage = `
             <p>Nama: ${name}</p>
@@ -43,23 +42,30 @@ function displayFormSubmission() {
 
         pesanDiv.innerHTML = displayMessage;
 
-        // Hapus isian formulir setelah pengiriman
         form.reset();
     });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Perform a fetch request for JSON data
-    fetch('../data/dataNavbar.json')
-        .then(response => response.json())
-        .then(data => {
-            // Call generateButtonNavbar function with JSON data
-            generateButtonNavbar(data);
-        })
-        .catch(error => {
-            console.error('Failed to load JSON data:', error);
-        });
+    const dataJSON = [
+        {
+            "label": "Home",
+            "id": "#home"
+        },
+        {
+            "label": "Our Profile",
+            "id": "#our-profile"
+        },
+        {
+            "label": "Achievement",
+            "id": "#achievement"
+        },
+        {
+            "label": "Message Us",
+            "id": "#form"
+        }
+    ]
 
-    // Call displayFormSubmission function
+    generateButtonNavbar(dataJSON);
     displayFormSubmission();
 });
