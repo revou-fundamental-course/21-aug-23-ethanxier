@@ -1,0 +1,18 @@
+[
+    {
+        "label": "Home",
+        "id": "#home"
+    },
+    {
+        "label": "Our Profile",
+        "id": "#our-profile"
+    },
+    {
+        "label": "Achievement",
+        "id": "#achievement"
+    },
+    {
+        "label": "Message Us",
+        "id": "#form"
+    }
+]

@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revou mini-project</title>
+    <script src="./script/script.js" type="module" defer></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="icon"
+      href="https://images.glints.com/unsafe/180x0/glints-dashboard.s3.amazonaws.com/company-logo/a32f81155cd0d4f16d36aef74f7d2644.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="navbar">
+        <!-- <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Logo_Universitas_Brawijaya.svg"> -->
+        <img
+          class="logo"
+          src="https://images.glints.com/unsafe/180x0/glints-dashboard.s3.amazonaws.com/company-logo/a32f81155cd0d4f16d36aef74f7d2644.png"
+        />
+        <div id="buttonContainer"></div>
+      </header>
+      <div id="home" class="home">
+        <div class="welcome-message">
+          <h1>Welcome Zakki!</h1>
+        </div>
+        <div class="banner"></div>
+      </div>
+      <div id="our-profile">
+        <div class="profile-heading">
+          <h2>Our School Profile</h2>
+        </div>
+        <div class="profile-content">
+          <p>
+            Welcome to our school! We are dedicated to providing high-quality
+            education to our students.
+          </p>
+          <p>Our school is known for its:</p>
+          <ul>
+            <li>Experienced and passionate teachers</li>
+            <li>Modern and well-equipped classrooms</li>
+            <li>Strong focus on extracurricular activities</li>
+            <li>Commitment to student success</li>
+          </ul>
+          <p>
+            We believe that education is the key to a brighter future, and we
+            are proud to be a part of your educational journey.
+          </p>
+        </div>
+      </div>
+      <div id="achievement">
+        <div class="achievement-heading">
+          <h2>Our Achievements</h2>
+        </div>
+        <div class="achievement-content">
+          <p>
+            Over the years, our school has achieved numerous milestones and
+            accolades. Some of our notable achievements include:
+          </p>
+          <ul>
+            <li>Consistently high academic performance</li>
+            <li>Winners of regional science and math competitions</li>
+            <li>Successful community outreach programs</li>
+            <li>Recognition for environmental sustainability efforts</li>
+          </ul>
+          <p>
+            We are proud of our students, teachers, and staff who have worked
+            hard to achieve these milestones. Our commitment to excellence
+            continues!
+          </p>
+        </div>
+      </div>
+      <div id="form">
+        <div class="form">
+          <div>
+            <br />
+            <form action="" method="post" id="myForm">
+              <label for="name">Nama :</label>
+              <input id="name" type="text" />
+
+              <label for="tanggalLahir">Tanggal Lahir :</label>
+              <input type="datetime-local" id="tanggalLahir" />
+
+              <label for="jenisKelamin">Jenis Kelamin:</label>
+              <select id="jenisKelamin" name="jenisKelamin">
+                <option value="lakiLaki">Laki-Laki</option>
+                <option value="perempuan">Perempuan</option>
+              </select>
+
+              <label for="textPesan">Pesan</label>
+              <textarea id="textPesan" cols="40" rows="5">Ketik Disini</textarea>
+
+              <br />
+              <input type="submit" value="SUBMIT" />
+            </form>
+          </div>
+          <div class="pesan" id="pesan"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
